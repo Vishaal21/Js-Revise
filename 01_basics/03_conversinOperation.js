@@ -33,8 +33,8 @@ conversion results from anything to boolean
 let someNumber = 67
 let stringSomeNumber = Boolean(someNumber)
 
-// console.log(typeof stringSomeNumber);
-// console.log(stringSomeNumber);
+console.log(typeof stringSomeNumber);
+// console.log(stringSomeNumber);  //true
 
 
 // Operations
@@ -45,8 +45,8 @@ let str2 = " singh"
 // console.log("1" + 2 + 3)
 // console.log(1+ 3 + "2")
 
-console.log(+true)
-console.log(+"")
+// console.log(+true)
+// console.log(+"")
 
 let a = 100;
 
@@ -54,3 +54,4 @@ b = a++;
 c= ++a;
 
 console.log(b + " " + c);
+

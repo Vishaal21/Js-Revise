@@ -17,5 +17,5 @@ undefined =>
 symbol
 */
 
-console.log(typeof state);  //null
+console.log(typeof state);  //object
 console.log(typeof city);   //undefined
