@@ -42,3 +42,5 @@ arr.splice(0,3,10,20,30);  (start idx, end idx , items to be added )
 
 console.log(arr);
 */
+
+// 
