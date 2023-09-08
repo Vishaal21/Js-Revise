@@ -8,13 +8,13 @@
 
 //Conversions below tend to create confusion so we try to avoid them as much as possible.
 
-console.log(null > 0);   // 0>0
-console.log(null == 0); 
-console.log(null >= 0);   //0>=0
+// console.log(null > 0);   // 0>0 false
+// console.log(null == 0);   //false
+// console.log(null >= 0);   //0>=0 true
 
-// console.log(undefined > 0);
-// console.log(undefined == 0);
-// console.log(undefined >= 0);
+console.log(undefined > 0);   //false
+console.log(undefined == 0);  //false
+console.log(undefined >= 0);  //false
 
 
 /*equality check == and comparisons (< , <= , > , >=) work differently in JS.

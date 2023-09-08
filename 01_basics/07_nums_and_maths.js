@@ -10,7 +10,7 @@ let num2 = new Number(500)
 
 // console.log(num2.toString().charAt(2));
 
-// console.log(num2.length);
+// console.log(num2.toString().length);
 
 /* toString()
 
@@ -30,8 +30,8 @@ let bool = true;
 
 
 let number1 = 600.67084738;
-console.log(number1.toFixed(1));  //600.7
-console.log(number1.toPrecision(5)); //600.67
+// console.log(number1.toFixed(1));  //600.7
+// console.log(number1.toPrecision(5)); //600.67
 
 const hundreds = 1000000
 // console.log(hundreds.toLocaleString('en-IN'));
