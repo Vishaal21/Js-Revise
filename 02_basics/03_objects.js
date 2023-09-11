@@ -8,7 +8,7 @@ const obj = {
     "city": "lucknow" 
 }
 
-// console.log(obj["city"]);
+console.log(obj["city"]);
 // console.log(obj["name"]);
 
 //Interview Question
@@ -32,8 +32,10 @@ const myObj = {
 // console.log(myObj[mySym]);        //calling symbol
 // console.log(myObj["name"]);       //calling other normal keys
 
+// console.log(myObj[name]);
 
-console.log(myObj.greeting3());
+
+// console.log(myObj.greeting3());
 // console.log(myObj);
 
 

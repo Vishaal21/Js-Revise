@@ -66,6 +66,7 @@ const users = [
 // console.log(obj.hasOwnProperty('isLoggedIn'));
 
 //Object Destructuring
+//Object destructuring is a feature in JavaScript that allows you to extract values from objects and assign them to variables in a more concise and convenient way. 
 
 // const oobj = {1 : "a" , 5 : "b" , 6 : "c"}
 
