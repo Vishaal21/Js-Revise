@@ -7,21 +7,15 @@ as variables inside iife have their own private scope within iife and cannot be 
 2)If i want to execute my function as soon as it is declared.
 */
 
+let name = "vishal"/
+
 (function chai(){
+    console.log(name);      //cannot acess name before initialization
     console.log("vishal is great");
 })();
 
 
-(function aurcode(){
-    console.log("hitesh is great");
-})()
+// (function aurcode(){
+//     console.log("hitesh is great");
+// })()
 //By adding the extra parentheses around the function declaration (function chai() {...}), you are telling JavaScript to immediately invoke (run) the function after defining it. 
-
-let val1 = 10;
-let val2 = 9;
-function addNum(num1 , num2){
-    let result = num1 + num2
-    return result
-}
-let result1 = addNum(val1 , val2);
-let result2 = addNum(8,9)

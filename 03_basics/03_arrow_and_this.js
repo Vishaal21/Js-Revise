@@ -11,7 +11,7 @@ const obj = {
 // obj.name = "sam"
 // obj.work();
 
-//this in node environment is empty object while in browser is wondow object.
+//this in node environment is empty object while in browser is window object.
 // console.log(this);
 
 // function chai(){
@@ -25,7 +25,7 @@ const obj = {
 let chai = () =>{
     let username = "vishal"
     // console.log(this.username);   //undefined
-    console.log(username);
+    // console.log(username);
 }
 
 // chai();
@@ -34,7 +34,7 @@ let chai = () =>{
 //     return num1 + num2 
 // }
 
-//in curly braces {} i have to type return but during ()no need to write retun keyword.
+//in curly braces {} i have to type return but during in ()no need to write retun keyword.
 
 let ans = (num1,num2) => (num1 + num2)
 

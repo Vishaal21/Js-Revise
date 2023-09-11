@@ -35,10 +35,10 @@ function addTwoNumbers(num1, num2) {
 
 // console.log(addTwoNumbers(8,9));
 
-//undefined is trated as false in js
+//undefined is treated as false in js
 function loginUserName(user) {
   if (!user) {
-    console.log("please enter a use name");
+    console.log("please enter a user name");
     return;
   } else {
     return `${user} just logged in`;
