@@ -52,6 +52,6 @@ const myCoding = [
     }
 ]
 
-myCoding.forEach((item , index) => {
-    console.log(item.name , index);
-})
+// myCoding.forEach((item , index) => {
+//     console.log(item.name , index);
+// })
