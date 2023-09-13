@@ -4,7 +4,7 @@ const arr = [1,2,3,4,5,6,7,8,9,10]
 
 // let ans = arr.map((num) => num*10)
 
-// console.log(ans);
+// // console.log(ans);
 
 // ans = arr.map((num) => num*10).
 // filter((num) => num>21)
@@ -14,13 +14,15 @@ const arr = [1,2,3,4,5,6,7,8,9,10]
 
 // *******************Reduce**********************
 
-// const narr = [11,26,3]
+const narr = [11,26,3]
 
 // const ans = narr.reduce((acc , currVal) => {
 
 //     console.log(`acc : ${acc} currVal : ${currVal}`)
 
-//     return acc  + currVal}
+//     return acc  + currVal
+
+//     }
 //     , 0) 
 
 // console.log(ans);

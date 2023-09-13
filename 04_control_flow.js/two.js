@@ -1,14 +1,14 @@
 //for of loop
 
-let arr = [8,9,5,7,9]
-for(i of arr){
-    // console.log(`the value is ${i}`);
-}
+// let arr = [8,9,5,7,9]
+// for(i of arr){
+//     console.log(`the value is ${i}`);
+// }
 
-let name = "vishal singh"
-for (i of name){
-    // console.log(`the character is ${i}`);
-}
+// let name = "vishal singh"
+// for (i of name){
+//     console.log(`the character is ${i}`);
+// }
 
 //maps
 //holds unique values
@@ -24,8 +24,8 @@ for(key of map){
     // console.log(key);  //here i will get array of key and value for each entry, so we will destructure the array
 }
 
-for([key,value] of map){
-    // console.log(`key is ${key} and value is ${value}`); 
+for(let [key,value] of map){
+    console.log(`key is ${key} and value is ${value}`); 
 }
 
 //for of on objects
@@ -35,7 +35,7 @@ const obj = {
     age : 23
 }
 
-for(key of obj){
-    // console.log(key);   //for of do not work on object
-}
+// for(key of obj){
+//     // console.log(key);   //for of do not work on object
+// }
 

@@ -6,13 +6,13 @@ let obj = {
     city : "lucknow"
 }
 
-for(const i in obj){
-    // console.log(i);  //will print keys
-}
+// for(const i in obj){
+//     console.log(i);  //will print keys
+// }
 
-for (key in obj){
-    // console.log("the value for" + key + "is" + obj[key]);   // The keys are treated as strings: "name", "age", "city"
-}
+// for (key in obj){
+//     console.log("the value for" + key + "is " + obj[key]);   // The keys are treated as strings: "name", "age", "city"
+// }
 
 //array
 let arr = [2,6,8,9]
