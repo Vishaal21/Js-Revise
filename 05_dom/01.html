@@ -22,6 +22,41 @@
       <li class = "test">three</li>
     </ul>
   </body>
+  <script>
+    let element = document.getElementById('title')
+    // element = document.getElementById('title').className
+    // element = document.getElementById('title').innerText
+    // element = document.getElementById('title').getAttribute('id')  //which attribut i want
+    // document.getElementById('title').setAttribute('class' , "test") //class ki value test set kar do . it override the old value
+    // element = document.getElementById('title')
+    // element.style.color = "blue"
+
+    //.querySelector can select an element with any of its attributes with the help of css selectors
+    // element = document.querySelector('h1')
+    // element = document.querySelector('#title')
+    // element = document.querySelector(".heading")
+
+
+    // console.log(element);
+
+    //slecting list item via queryselector
+    // const myuL = document.querySelector('ul')
+    // const myLi =  myuL.querySelector("li")
+    // console.log(myLi);
+
+    let eles = document.querySelectorAll('li')
+    eles[1].style.color = "green"
+
+    eles.forEach((item)=> {
+      item.style.backgroundColor = "orange"
+    })
+    console.log(eles);
+    
+
+
+
+    // console.log(element);
+  </script>
 </html>
 
 
@@ -31,7 +66,7 @@
   .innerHTML => supports inner html as well
   document.querySelector('ul') //will select first element with ul tag
   document.querySelector('ul').querySelector("li").style.color = "green" //applying css on dom
-  we get node list after running .querSelectorAll which is not array . its just similar to it.
+  we get [NodeList] after running .querSelectorAll which is not array . its just similar to it.
   Even if i get one element by .querSelectorAll than also i cannot directly apply css onto it.
   Mostly use forEachLoop with nodeList. But if i want to use map,filter,reduce so i have to convert it into array
   convert HTMLCollection also to array by Arrays.from(HTMLCollection) method and apply forloop and array methods on it
