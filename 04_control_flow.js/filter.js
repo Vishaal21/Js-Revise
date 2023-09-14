@@ -14,7 +14,7 @@ const nums = [1,2,3,5,6,7,8,9,10]
 
 //it return elements of array which will me the conditions specified in the function body
 
-// const ans = nums.filter((item) => item>4)  //it will return as there is implicit return statment by js
+const ans = nums.filter((item) => item>4)  //it will return as there is implicit return statment by js
 
 // const ans = nums.filter((item) => {
 //     item > 5 // this will not work because when there is scope involve {} we have to use return statment to return elements
@@ -24,7 +24,7 @@ const nums = [1,2,3,5,6,7,8,9,10]
 //     return item > 5  // [ 6, 7, 8, 9, 10 ]
 // })
 
-// console.log(ans);
+console.log(ans);
 
 //to do the above work by foreach
 
