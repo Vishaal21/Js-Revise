@@ -1,11 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Chai aur Code | DOM</title>
 </head>
-<body>
-    
+<body style="background-color: black; color: white">
+    <ul class="language">
+        <li>JavaScript</li>
+    </ul>
 </body>
+<script>
+    function addLanguage(lang){
+        const ele = document.createElement("li")
+        const textNode = document.createTextNode(lang)
+        ele.appendChild(textNode)
+        let ul = document.querySelector(".language")
+        ul.appendChild(ele)
+        console.log(ul);
+    }
+    addLanguage("python")
+    addLanguage("typescript")
+
+    //edit
+    //li: This part of the selector selects all <li> elements (list items) on the web page.
+    //:nth-child(2): This is a pseudo-class selector that specifies which <li> element to select based on its position within its parent. In this case, it's selecting the second <li> element among its siblings.    
+    const secondLang = document.querySelector("li:nth-child(2)")
+    console.log(secondLang)
+    // secondLang.innerHTML = "mojo" //costly process
+    const newLang = document.createElement("li")
+    newLang.textContent = "mojo"
+    secondLang.replaceWith(newLang)
+
+    //edit
+    const firstLang = document.querySelector("li:first-child")
+    firstLang.outerHTML = "<li>Java</li>"
+
+    //remove
+    const lastLng = document.querySelector("li:last-child")
+    lastLng.remove();
+
+</script>
 </html>

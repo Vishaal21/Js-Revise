@@ -15,11 +15,38 @@
     div.setAttribute("title" , "randomTitle")
     div.style.color = "blue"
     div.style.padding = "14px"
-    // div.innerHTML = "vishal is great"
-    const addText = document.createTextNode("vishal is the best")
+    div.innerHTML = "vishal is great"
+    const addText = document.createTextNode("vishal is the best")   //this method is more efficient than the .innerHTML ones
     div.appendChild(addText)
 
     document.body.appendChild(div)
+    
+    /*.innerHTML vs .createTextNode
+    ***************************Rebuilding the Entire HTML Content" when using div.innerHTML **************
+
+HTML Content Replacement: When you use div.innerHTML = ..., you're essentially telling the browser to replace all the content inside a <div> element with new content. This new content is specified as a string in the ... part.
+
+DOM Structure: The content inside a web page is structured like a tree, with elements nested within other elements. This structure is called the DOM (Document Object Model). Each HTML element (like <div>, <p>, or <a>) is a part of this tree, with parent and child relationships.
+
+Parsing and Recreating: When you replace the content of a <div> using innerHTML, the browser needs to do two main things:
+
+Parsing: It must read and understand the new HTML content you provided in the .... This process is called parsing, where the browser figures out the structure of the new content.
+Recreating: After understanding the new structure, the browser rebuilds the entire DOM structure within the <div>. It creates new nodes (like elements, text, etc.) based on the new HTML string.
+
+******************On the other hand, the document.createTextNode and appendChild method is generally considered more efficient because it does the following:
+
+Minimal DOM Manipulation:
+
+Instead of replacing the entire content, this method adds a new text node as a child to the <div>. It doesn't involve recreating the entire DOM structure within the <div>.
+Adding a single text node is a lightweight operation compared to rebuilding the DOM.
+No HTML Parsing:
+
+You're working with plain text content, so there's no need for the browser to parse and validate HTML. This can save processing time.
+
+
+   
+
+    */
 
 </script>
 </html>
