@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>html Events </title>
+</head>
+<body style="background-color: #414141; color: aliceblue;">
+    <h2>Amazing image</h2>
+    <div >
+        <ul id="images">
+            <li><img width="200px" id="photoshop" src="https://images.pexels.com/photos/3561339/pexels-photo-3561339.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt="photoshop"></li>
+            <li><img width="200px" id="japan" src="https://images.pexels.com/photos/3532553/pexels-photo-3532553.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+            <li><img width="200px" id="river" src="https://images.pexels.com/photos/3532551/pexels-photo-3532551.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+            <li><img width="200px" id="owl" src="https://images.pexels.com/photos/3532552/pexels-photo-3532552.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt="" ></li>
+            <li><img width="200px" id="prayer" src="https://images.pexels.com/photos/2522671/pexels-photo-2522671.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+            <li><a style="color: aliceblue;" href="https://google.com" id="google">Google</a></li>
+        </ul>
+   </div>
+</body>
+<script>
+    //dont inject onClick property in html code.As it is not scalable.In react it is scalable.
+    
+    // document.getElementById('owl').onclick =  function(){
+    //     alert('owl clicked')
+    // }  //This approach is good but it gives less features as compared to eventListeners such as propogation
+
+    //attachEvent()
+    //jquery - on event listener
+
+    //Theory
+    /*
+    In JavaScript, when you use the addEventListener() method to attach an event listener to an HTML element, a special object called an "event object" is automatically generated and passed as a parameter to the event handler function you specify. This event object contains information about the event that occurred, and it allows you to access various details and properties related to that event.
+
+    Parameter in Event Handler Function: When you define an event handler function and attach it using addEventListener(), you can choose to give this function a parameter (often called event, but you can name it whatever you like). This parameter is automatically populated with the event object when the event occurs and the handler is called.
+
+Information and Properties: The event object contains a wealth of information about the event, including details like the type of event, the target element that triggered the event, the position of the mouse during a mouse-related event, keyboard key codes for key events, and more.
+
+Common Properties:
+
+event.type: A string that specifies the type of the event (e.g., "click," "keydown," "mouseover").
+event.target: A reference to the HTML element that triggered the event.
+event.preventDefault(): A method that allows you to prevent the default behavior of the event (e.g., preventing a form from submitting).
+event.stopPropagation(): A method that stops the event from propagating to parent elements (bubbling).
+    */
+
+    //Event properties to study
+
+    //type, timestamp, defaultPrevented , target , toElement , srcElement , currentTarget , 
+    //clientX , clientY , screenX , screenY
+    //altkey , ctrlkey , shiftkey , keyCode
+
+    // document.getElementById('owl').addEventListener('click' , function(e){
+    //         console.log(e);
+    //         // alert('owl clicked again')
+    //     },false)
+
+    /*
+    Event Propogation :
+    Event propagation, also known as "event flow," refers to the order in which events are delivered or passed through the elements in the Document Object Model (DOM) when an event occurs in a web page.
+
+    Bubbling Phase:
+
+    In the bubbling phase, when an event occurs on a specific element, it first triggers the event on that element.
+
+    Then, it bubbles up through the ancestors (parent elements) of the target element, triggering the same event on each ancestor.
+
+    This means that the innermost element's event handler is called first, and then the event propagates up to the outer elements.
+
+    Capturing Phase:
+
+    In the capturing phase, the event starts from the top of the DOM hierarchy (usually the window or document) and moves down through the ancestors to the target element.
+
+    *****This phase is less commonly used and can be explicitly enabled by setting the third parameter of addEventListener() to true.
+
+    In practice, most event handling occurs during the bubbling phase.
+    */
+        // document.getElementById('images').addEventListener('click' , function(e){
+        //     console.log("clicked inside the ul");
+        // },false)
+
+        // document.getElementById('owl').addEventListener('click' , function(e){
+        //     console.log("owl clicked");
+        //     e.stopPropagation(); 
+        // },false)
+
+        // document.getElementById("google").addEventListener('click' , function (e){
+        //     console.log("google clicked");
+        //     e.preventDefault() //hinders default behaviour of the element with the id="google"
+        // }, false)
+
+        //Click on the image and the image disappears
+        document.querySelector("#images").addEventListener
+        ("click" , function (e){
+            // console.log(e.target);
+
+            // console.log(e.target.parentNode);
+            // let removeIt = e.target.parentNode;
+            // removeIt.remove()
+            // removeIt.parentNode.removeChild(removeIt)
+
+            //If i click on list item than whole image is gone so 
+
+            if(e.target.tagName === "IMG"){
+                console.log(e.target.id);
+                e.target.parentNode.remove();
+            }
+
+        } , false)
+
+</script>
+</html>
