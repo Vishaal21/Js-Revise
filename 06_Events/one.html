@@ -51,6 +51,7 @@ event.stopPropagation(): A method that stops the event from propagating to paren
     //altkey , ctrlkey , shiftkey , keyCode
 
     // document.getElementById('owl').addEventListener('click' , function(e){
+    //     console.log(e.type);
     //         console.log(e);
     //         // alert('owl clicked again')
     //     },false)
@@ -92,7 +93,7 @@ event.stopPropagation(): A method that stops the event from propagating to paren
         //Click on the image and the image disappears
         document.querySelector("#images").addEventListener
         ("click" , function (e){
-            // console.log(e.target);
+            console.log(e.target);
 
             // console.log(e.target.parentNode);
             // let removeIt = e.target.parentNode;
