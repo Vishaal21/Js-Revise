@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>Document</title>
+</head>
+<body>
+    <h1>Vishal is the best</h1>
+
+    <button id="stop">Stop</button>
+    
+</body>
+<script>
+
+    const timeoutID = setTimeout(()=>{
+        document.querySelector("h1").innerHTML = "Best way of learning Js"
+    },2000)
+
+    //Clear Timeout
+    /*
+    When you call setTimeout(), it returns a unique identifier called a "timeout ID." This ID is essentially a reference to the scheduled timeout.
+
+    If, for some reason, you want to cancel the scheduled timeout (before it has a chance to execute), you can use clearTimeout() and pass the timeout ID as an argument.
+
+    */
+    document.querySelector("#stop").addEventListener("click" , ()=>{
+        clearTimeout(timeoutID)
+        console.log("stopped");
+    })
+</script>
+</html>
